@@ -1,7 +1,7 @@
-# @contentpi/utils
+# @contentpi/core
 
 ### Installation
 
 ```
-npm install --save @contentpi/utils
+npm install --save @contentpi/core
 ```

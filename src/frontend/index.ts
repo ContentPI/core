@@ -1,9 +1,3 @@
-// Dependencies
-import slug from 'slug'
-
-// Utils
-import { isDefined, isString } from '@contentpi/utils'
-
 // Interfaces
 interface Router {
   asPath: string
@@ -14,22 +8,6 @@ interface PathInfo {
   module: string
   action: string
   id: string
-}
-
-export function buildUrl(params: any[]): any {
-  return params.filter(v => v).join('/')
-}
-
-export function slugFn(str = ''): string {
-  return slug(str, { lower: true })
-}
-
-export function cx(...classes: string[]): string {
-  return classes.join(' ').trim()
-}
-
-export function isFirstRender(items: any): boolean {
-  return !isDefined(items) || items.length === 0 || Object.keys(items).length === 0
 }
 
 export function getModuleInfo(router: Router): PathInfo {
@@ -86,30 +64,4 @@ export function invertHexCode(hexCode?: any): string {
   const b = parseInt(hex.slice(4, 6), 16)
 
   return r * 0.299 + g * 0.587 + b * 0.114 > 186 ? '#000000' : '#FFFFFF'
-}
-
-export function waitFor(time: number): Promise<any> {
-  return new Promise(resolve => setTimeout(resolve, time * 1000))
-}
-
-export function add(cssRule: any): any {
-  return {
-    if: (condition: boolean) => {
-      if (condition && cssRule) {
-        if (isString(cssRule)) {
-          return cssRule
-        }
-
-        let cssString = ''
-
-        Object.keys(cssRule).forEach((property: string) => {
-          cssString += `${property}: ${cssRule[property]};`
-        })
-
-        return cssString
-      }
-
-      return ''
-    }
-  }
 }

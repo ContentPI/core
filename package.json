@@ -1,0 +1,58 @@
+{
+  "name": "@contentpi/core",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .js,.tsx,.ts",
+    "lint:fix": "eslint --ext .tsx,.ts --fix src",
+    "test": "jest --config jestconfig.json",
+    "prepublish": "npm run lint && npm run build"
+  },
+  "author": "Carlos Santana",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ContentPI/core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ContentPI/core/issues"
+  },
+  "homepage": "https://github.com/ContentPI/core#readme",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "license": "MIT",
+  "jest": {
+    "globals": {
+      "describe": true
+    }
+  },
+  "devDependencies": {
+    "@types/dot-object": "^2.1.2",
+    "@types/jest": "26.0.14",
+    "@types/node": "14.11.2",
+    "@types/node-fetch": "2.5.7",
+    "@typescript-eslint/eslint-plugin": "4.2.0",
+    "@typescript-eslint/parser": "4.2.0",
+    "cross-env": "7.0.2",
+    "eslint": "7.9.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.21.0",
+    "jest": "26.4.2",
+    "prettier": "2.1.2",
+    "ts-jest": "26.4.0",
+    "typescript": "4.0.3"
+  },
+  "dependencies": {
+    "@contentpi/utils": "^1.0.1",
+    "@types/slug": "0.9.1",
+    "isomorphic-unfetch": "3.0.0",
+    "slug": "3.3.4"
+  }
+}

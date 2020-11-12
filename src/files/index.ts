@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-unfetch'
+import fetch from 'isomorphic-fetch'
 
 export function getFileInfo(file: any): any {
   if (!file) {

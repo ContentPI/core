@@ -56,6 +56,10 @@ export const languagesList: any = {
     name: '한국어',
     lang: 'ko-KR'
   },
+  'ru-RU': {
+    name: 'Русский',
+    lang: 'ru-RU'
+  },
   'zh-CN': {
     name: '中文（简体）',
     lang: 'zh-CN'
